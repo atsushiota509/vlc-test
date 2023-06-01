@@ -8,5 +8,5 @@ import click
 @click.argument('input_file')
 @click.command()
 def cmd(dst: str, port: int, ttl: int, input_file: str):
-    sout = f"'#rtp{{ dst={dst},port={port},mux=ts,ttl={ttl} }}'"
+    sout = f"#rtp{{ dst={dst},port={port},mux=ts,ttl={ttl} }}"
     subprocess.run(["vlc", "-I", "dummy", input_file, "--sout", sout])

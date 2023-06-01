@@ -17,3 +17,6 @@ build-backend = "hatchling.build"
 managed = true
 [tool.hatch.metadata]
 allow-direct-references = true
+
+[tool.rye.scripts]
+vlc = "python -m vlc_test"
